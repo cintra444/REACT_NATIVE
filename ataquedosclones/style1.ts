@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20,
         paddingBottom: 100,
+        
     },
     contentContainer: {
         paddingBottom: 20,
@@ -33,9 +34,6 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
         backgroundColor: '#2d2e30',
         elevation: 3,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
         marginBottom: 16,
     },
     cardSeta: {
@@ -75,17 +73,13 @@ export const styles = StyleSheet.create({
         paddingTop: 40,
     },
     iconImage: {
-        width: 40,
-        height: 40,
-        resizeMode: 'contain',
+        width: 35,
+        height: 35,
     },
     iconImageCard: {
         width: 24,
         height: 24,
-        resizeMode: 'contain',
-    },
-    iconImageLogo: {
-        resizeMode: 'contain',
+
     },
     menuContainer: {
         width: '100%',
@@ -98,6 +92,7 @@ export const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 8,
         height: 65,
+        width: 80,
     },
     iconTextMenu: {
         fontSize: 12,
@@ -116,7 +111,7 @@ export const styles = StyleSheet.create({
     itemPropaganda: {
         width: '100%',
         height: 198,
-        resizeMode: 'contain',
+
     },
     limiteCredito: {
         backgroundColor: '#2d2e30',
@@ -125,10 +120,6 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
         alignItems: 'center',
         marginBottom: 20,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.3,
-        shadowRadius: 3,
         elevation: 4,
     },
     limiteTitulo: {
@@ -209,12 +200,12 @@ export const styles = StyleSheet.create({
         gap: 20,
     },
     desconto: {
-    backgroundColor: '#3c2014', 
-    borderRadius: 10,           
-    paddingHorizontal: 5,
-    paddingVertical: 5,
-    marginTop: 5, 
-    width: '90%'  
+        backgroundColor: '#3c2014',
+        borderRadius: 10,
+        paddingHorizontal: 5,
+        paddingVertical: 5,
+        marginTop: 5,
+        width: '90%'
     },
     textDesconto: {
         fontSize: 12,
@@ -225,7 +216,7 @@ export const styles = StyleSheet.create({
         fontSize: 10,
         margin: 5,
     },
-       menuRodape: {
+    menuRodape: {
         position: 'absolute',
         bottom: 0,
         left: 0,
@@ -239,7 +230,7 @@ export const styles = StyleSheet.create({
         borderColor: '#2d2e30',
         borderWidth: 1,
         height: 100,
-        
+
     },
     textoBotao: {
         fontSize: 12,

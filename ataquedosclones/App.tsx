@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, Text, FlatList, ScrollView, TouchableOpacity } from 'react-native';
-import { styles } from './styles';
+import { View, Image, Text, FlatList, ScrollView, TouchableOpacity} from 'react-native';
+import { styles } from './style1';
 import logo from './src/assets/logo.png';
 import olho from './src/assets/olho.png';
 import lupa from './src/assets/lupa.png';
@@ -28,9 +28,10 @@ import moedaLoop from './src/assets/moedaLoop.png'
 import cupomDesconto from './src/assets/cupomDesconto.png';
 import inter from './src/assets/inter.png';
 import inicio from './src/assets/inicio.png';
-
+import { useNavigation } from '@react-navigation/native';
 
 export default function App() {
+
 
   const menuItems = [
     { id: '1', title: 'Shopping', image: oferta },
@@ -43,16 +44,18 @@ export default function App() {
   ];
 
   return <View style={styles.container}>
-  <ScrollView contentContainerStyle={styles.contentContainer}>
-    
+    <ScrollView contentContainerStyle={styles.contentContainer}>
+
       <View style={styles.headerTopo}>
         <Image source={logo} style={styles.iconImageLogo} />
         <Image></Image>
         <Image source={olho} style={styles.iconImage} />
         <Image source={lupa} style={styles.iconImage} />
+        <TouchableOpacity >
         <Image source={usuario} style={styles.iconImage} />
+        </TouchableOpacity>
       </View>
-      {/* card financas */}
+      {/* seção financas */}
       <View style={styles.header}>
         <View style={styles.opcoes}>
           <Image source={bandeira} style={styles.iconImage} />
@@ -73,7 +76,6 @@ export default function App() {
           <Text style={styles.textValor}>R$ 0,65</Text>
           <Image source={seta} style={styles.textValor} />
         </View>
-        {/* card valor */}
         <View style={styles.cardBody}>
           <View style={styles.iconRow}>
             <View style={styles.opcoes}>
@@ -103,10 +105,10 @@ export default function App() {
           showsHorizontalScrollIndicator={false}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <View style={styles.cardItem}>
+            <TouchableOpacity style={styles.cardItem}>
               <Image source={item.image} style={styles.iconImage} />
               <Text style={styles.iconTextMenu}>{item.title}</Text>
-            </View>
+            </TouchableOpacity>
           )}
         />
       </View>
@@ -163,7 +165,7 @@ export default function App() {
         <View style={styles.cardAdvertisingFim}>
           <Text style={styles.textAdvertisingTopo}>Indique amigos</Text>
           <Image source={amigos} />
-          <View style={styles.ganheAte}>
+          <View>
             <Text style={styles.ganhe}>Ganhe até:</Text>
           </View>
           <View>
@@ -171,31 +173,31 @@ export default function App() {
           </View>
         </View>
       </View>
-      
-      </ScrollView>
-      {/* rodape fixo */}
-      <View style={styles.menuRodape}>
-        <TouchableOpacity >
-          <Image source={inicio} style={styles.iconImage} />
-          <Text style={styles.textoBotao}>Início</Text>
-        </TouchableOpacity>
-        <TouchableOpacity >
-          <Image source={invest} style={styles.iconImage} />
-          <Text style={styles.textoBotao}>Invest</Text>
-        </TouchableOpacity>
-        <TouchableOpacity >
-          <Image source={inter} style={styles.iconImage} />
-          <Text style={styles.textoBotao}>Inter</Text>
-        </TouchableOpacity>
-        <TouchableOpacity >
-          <Image source={oferta} style={styles.iconImage} />
-          <Text style={styles.textoBotao}>Oferta</Text>
-        </TouchableOpacity>
-        <TouchableOpacity >
-          <Image source={pontinhos} style={styles.iconImage} />
-          <Text style={styles.textoBotao}>Todos</Text>
-        </TouchableOpacity>
-      </View>
+
+    </ScrollView>
+    {/* rodape fixo */}
+    <View style={styles.menuRodape}>
+      <TouchableOpacity >
+        <Image source={inicio} style={styles.iconImage} />
+        <Text style={styles.textoBotao}>Início</Text>
+      </TouchableOpacity>
+      <TouchableOpacity >
+        <Image source={invest} style={styles.iconImage} />
+        <Text style={styles.textoBotao}>Invest</Text>
+      </TouchableOpacity>
+      <TouchableOpacity >
+        <Image source={inter} style={styles.iconImage} />
+        <Text style={styles.textoBotao}>Inter</Text>
+      </TouchableOpacity>
+      <TouchableOpacity >
+        <Image source={oferta} style={styles.iconImage} />
+        <Text style={styles.textoBotao}>Oferta</Text>
+      </TouchableOpacity>
+      <TouchableOpacity >
+        <Image source={pontinhos} style={styles.iconImage} />
+        <Text style={styles.textoBotao}>Todos</Text>
+      </TouchableOpacity>
     </View>
-  
+  </View>
+
 };
