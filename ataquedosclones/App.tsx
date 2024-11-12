@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Image, Text, FlatList, ScrollView, TouchableOpacity, TextInput} from 'react-native';
+import { View, Image, Text, FlatList, ScrollView, TouchableOpacity, TextInput } from 'react-native';
 import { styles } from './style1';
 import logo from './src/assets/logo.png';
 import olho from './src/assets/olho.png';
@@ -32,12 +32,12 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-  export default function App() {
-    const [searchVisible, setSearchVisible] = useState(false);
-  
-    const toggleSearch = () => {
-      setSearchVisible(!searchVisible);
-    };
+export default function App() {
+  const [searchVisible, setSearchVisible] = useState(false);
+
+  const toggleSearch = () => {
+    setSearchVisible(!searchVisible);
+  };
 
   const menuItems = [
     { id: '1', title: 'Shopping', image: oferta },
@@ -59,16 +59,16 @@ import { useNavigation } from '@react-navigation/native';
         <TouchableOpacity onPress={toggleSearch} style={styles.iconImage}>
           <Image source={lupa} style={styles.iconImage} />
         </TouchableOpacity>
-        
+
         {searchVisible && (
           <TextInput
             placeholder="Pesquisar..."
             style={styles.searchInput}
-            autoFocus 
+            autoFocus
           />
         )}
         <TouchableOpacity >
-        <Image source={usuario} style={styles.iconImage} />
+          <Image source={usuario} style={styles.iconImage} />
         </TouchableOpacity>
       </View>
       {/* seção financas */}
@@ -121,10 +121,12 @@ import { useNavigation } from '@react-navigation/native';
           showsHorizontalScrollIndicator={false}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <TouchableOpacity style={styles.cardItem}>
-              <Image source={item.image} style={styles.iconImage} />
+            <View style={styles.cardContainer}>
+              <TouchableOpacity style={styles.cardItem}>
+                <Image source={item.image} style={styles.iconImage} />
+              </TouchableOpacity>
               <Text style={styles.iconTextMenu}>{item.title}</Text>
-            </TouchableOpacity>
+            </View>
           )}
         />
       </View>

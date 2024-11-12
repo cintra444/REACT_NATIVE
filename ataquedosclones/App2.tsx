@@ -20,64 +20,64 @@ export default function App() {
     <View style={styles.headerTopo}>
       <Image source={setinhas} style={styles.imagemMenu} />
       <Text style={styles.textTopo}>Perfil</Text>
-      <Image source={sinos} style={styles.imagemMenu}/>
+      <Image source={sinos} style={styles.imagemMenu} />
     </View>
     <View style={styles.usuario}>
-      <Image source={usuario_lapis} style={styles.imagemUsuario}/>
+      <Image source={usuario_lapis} style={styles.imagemUsuario} />
       <Text style={styles.textUsuario}>EBER JUNIOR CINTRA</Text>
     </View>
     <View style={styles.botao}>
       <Text style={styles.textButton}>Inter Digital</Text>
     </View>
-    
+
     <View style={styles.cardMenu}>
       <Image source={dadosBancarios} style={styles.imagemMenu} />
       <Text style={styles.textBody}>Dados Bancários</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    <View style={styles.linha}/>
+    <View style={styles.linha} />
     <View style={styles.cardMenu}>
       <Image source={personalize} style={styles.imagemMenu} />
       <Text style={styles.textBody}>Personalizar Super App</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    <View style={styles.linha}/>
+    <View style={styles.linha} />
     <View style={styles.cardMenu}>
       <Image source={cadastro} style={styles.imagemMenu} />
       <Text style={styles.textBody}>Menu Cadastro e limites</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    <View style={styles.linha}/>
+    <View style={styles.linha} />
     <View style={styles.cardMenu}>
       <Image source={seguranca} style={styles.imagemMenu} />
       <Text style={styles.textBody}>Privacidade e Segurança</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    <View style={styles.linha}/>
+    <View style={styles.linha} />
     <View style={styles.cardMenu}>
       <Image source={rendimentos} style={styles.imagemMenu} />
       <Text style={styles.textBody}>Informe de Rendimentos</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    <View style={styles.linha}/>
+    <View style={styles.linha} />
     <View style={styles.cardMenu}>
       <Image source={isafe} style={styles.imagemMenu} />
       <Text style={styles.textBody}>Isafe e Internet Banking</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    <View style={styles.linha}/>
+    <View style={styles.linha} />
     <View style={styles.cardMenu}>
       <Image source={centralAjuda} style={styles.imagemMenu} />
       <Text style={styles.textBody}>Central de Ajuda</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    <View style={styles.linha}/>
+    <View style={styles.linha} />
     <View style={styles.cardMenu}>
       <Image source={sair} style={styles.imagemMenu} />
       <Text style={styles.textBody}> Sair do Super App</Text>
-      <Image source={setal}/>
+      <Image source={setal} />
     </View>
-    
+
 
     <Text style={styles.rodape}>Versão do Supper App: 13.4.7</Text>
   </View>;

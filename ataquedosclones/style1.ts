@@ -6,14 +6,14 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20,
         paddingBottom: 100,
-        
+
     },
     searchInput: {
         flex: 1,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 8,
-    paddingHorizontal: 8,
-    fontSize: 16,
+        backgroundColor: '#f0f0f0',
+        borderRadius: 8,
+        paddingHorizontal: 8,
+        fontSize: 16,
     },
     contentContainer: {
         paddingBottom: 20,
@@ -94,7 +94,6 @@ export const styles = StyleSheet.create({
     },
     cardItem: {
         alignItems: 'center',
-        marginHorizontal: 10,
         backgroundColor: '#2d2e30',
         padding: 10,
         borderRadius: 8,
@@ -104,8 +103,11 @@ export const styles = StyleSheet.create({
     iconTextMenu: {
         fontSize: 12,
         color: '#fff',
+        marginTop: 5,
+    },
+    cardContainer: {
         alignItems: 'center',
-        marginTop: 20,
+        marginHorizontal: 10,
     },
     cardAdvertising: {
         marginTop: 20,
