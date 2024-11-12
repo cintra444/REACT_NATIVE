@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Image, Text, FlatList, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { View, Image, Text, FlatList, ScrollView, TouchableOpacity, TextInput, Alert } from 'react-native';
 import { styles } from './style1';
 import logo from './src/assets/logo.png';
 import olho from './src/assets/olho.png';
@@ -33,10 +33,16 @@ import { useNavigation } from '@react-navigation/native';
 
 
 export default function App() {
+
   const [searchVisible, setSearchVisible] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
+  };
+
+  const handleSearchSubmit = () => {
+    Alert.alert('Pesquisa não encontrada');
   };
 
   const menuItems = [
@@ -65,9 +71,13 @@ export default function App() {
             placeholder="Pesquisar..."
             style={styles.searchInput}
             autoFocus
+            value={searchText}
+            onChangeText={text => setSearchText(text)}
+            onSubmitEditing={handleSearchSubmit}
+            returnKeyType='search'
           />
         )}
-        <TouchableOpacity >
+        <TouchableOpacity onPress={toggleSearch}>
           <Image source={usuario} style={styles.iconImage} />
         </TouchableOpacity>
       </View>
