@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Image, Text, FlatList, ScrollView, TouchableOpacity} from 'react-native';
+import React, { useState } from 'react';
+import { View, Image, Text, FlatList, ScrollView, TouchableOpacity, TextInput} from 'react-native';
 import { styles } from './style1';
 import logo from './src/assets/logo.png';
 import olho from './src/assets/olho.png';
@@ -30,8 +30,14 @@ import inter from './src/assets/inter.png';
 import inicio from './src/assets/inicio.png';
 import { useNavigation } from '@react-navigation/native';
 
-export default function App() {
 
+
+  export default function App() {
+    const [searchVisible, setSearchVisible] = useState(false);
+  
+    const toggleSearch = () => {
+      setSearchVisible(!searchVisible);
+    };
 
   const menuItems = [
     { id: '1', title: 'Shopping', image: oferta },
@@ -47,10 +53,20 @@ export default function App() {
     <ScrollView contentContainerStyle={styles.contentContainer}>
 
       <View style={styles.headerTopo}>
-        <Image source={logo} style={styles.iconImageLogo} />
+        <Image source={logo} />
         <Image></Image>
         <Image source={olho} style={styles.iconImage} />
-        <Image source={lupa} style={styles.iconImage} />
+        <TouchableOpacity onPress={toggleSearch} style={styles.iconImage}>
+          <Image source={lupa} style={styles.iconImage} />
+        </TouchableOpacity>
+        
+        {searchVisible && (
+          <TextInput
+            placeholder="Pesquisar..."
+            style={styles.searchInput}
+            autoFocus 
+          />
+        )}
         <TouchableOpacity >
         <Image source={usuario} style={styles.iconImage} />
         </TouchableOpacity>

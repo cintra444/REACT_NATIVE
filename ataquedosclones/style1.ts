@@ -8,6 +8,13 @@ export const styles = StyleSheet.create({
         paddingBottom: 100,
         
     },
+    searchInput: {
+        flex: 1,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    fontSize: 16,
+    },
     contentContainer: {
         paddingBottom: 20,
     },
@@ -79,7 +86,7 @@ export const styles = StyleSheet.create({
     iconImageCard: {
         width: 24,
         height: 24,
-
+        marginHorizontal: 8,
     },
     menuContainer: {
         width: '100%',
