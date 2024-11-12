@@ -116,6 +116,7 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
         alignItems: 'center',
         overflow: 'hidden',
+        marginBottom: 10,
     },
     itemPropaganda: {
         width: '100%',
